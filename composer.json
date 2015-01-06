@@ -1,0 +1,23 @@
+{
+    "name":"aoepeople/magento-improve-api",
+    "type":"magento-module",
+    "license":"GPL-3.0+",
+    "homepage":"https://github.com/AOEpeople/magento-improve-api",
+    "description":"Improvements for the Magento API",
+    "authors":[
+        {
+            "name":"Thomas Neumann",
+            "email":"thomas.neumann@aoe.com",
+            "homepage" : "http://www.aoe.com",
+            "role" : "Developer"
+        },
+        {
+            "name" : "Johann Reinke",
+            "homepage" : "https://www.bubbleshop.net/",
+            "role" : "Developer"
+        }
+    ],
+    "require":{
+        "magento-hackathon/magento-composer-installer":"*"
+    }
+}
