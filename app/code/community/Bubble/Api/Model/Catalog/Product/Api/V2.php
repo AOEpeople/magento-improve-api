@@ -2,6 +2,17 @@
 
 class Bubble_Api_Model_Catalog_Product_Api_V2 extends Mage_Catalog_Model_Product_Api_V2
 {
+
+    /**
+     * Create new product.
+     *
+     * @param string $type
+     * @param int $set
+     * @param string $sku
+     * @param array $productData
+     * @param string $store
+     * @return int
+     */
     public function create($type, $set, $sku, $productData, $store = null)
     {
         // Allow attribute set name instead of id
@@ -12,10 +23,15 @@ class Bubble_Api_Model_Catalog_Product_Api_V2 extends Mage_Catalog_Model_Product
         return parent::create($type, $set, $sku, $productData, $store);
     }
 
+    /**
+     *  Set additional data before product saved
+     *
+     *  @param    Mage_Catalog_Model_Product $product
+     *  @param    array $productData
+     *  @return   object
+     */
     protected function _prepareDataForSave($product, $productData)
     {
-        /* @var $product Mage_Catalog_Model_Product */
-
         if (property_exists($productData, 'categories')) {
             $categoryIds = Mage::helper('bubble_api/catalog_product')
                 ->getCategoryIdsByNames((array) $productData->categories);

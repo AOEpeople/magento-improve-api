@@ -4,6 +4,7 @@ class Bubble_Api_Helper_Data extends Mage_Core_Helper_Abstract
 {
     /**
      * @param string $attrSetName
+     * @param string $entityType
      * @return string
      */
     public function getAttributeSetIdByName($attrSetName, $entityType = 'catalog_product')
