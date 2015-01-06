@@ -53,7 +53,7 @@ composer install
     
 ### Oder installation alternatives
     
-#### [modgit](https://github.com/jreinke/modgit):
+#### [modgit](https://github.com/jreinke/modgit)
 
     $ cd /path/to/magento
     $ modgit init
